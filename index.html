@@ -1,85 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shop pre-built gaming PCs with powerful parts, clean design, and reliable support.">
   <title>Pre-Built PCs</title>
-  <style>
-    
-    :root { --bg:#ffffff; --text:#1f2328; --brand:#111; --muted:#f3f4f6; --accent:#2563eb; }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); display:flex; flex-direction:column; }
-    a { color: var(--accent); }
-
-    header { background: var(--brand); color:#fff; }
-    .nav { max-width: 960px; margin: 0 auto; display:flex; align-items:center; justify-content:space-between; padding: 14px 16px; }
-    .brand { display:flex; align-items:center; gap:10px; }
-    .site-name { font-weight:800; letter-spacing:.2px; }
-    .menu { list-style:none; display:flex; gap:18px; margin:0; padding:0; }
-    .menu a { color:#fff; text-decoration:none; font-weight:600; }
-
-    main { max-width: 960px; margin: 0 auto; padding: 24px 16px; flex:1; }
-    h1 { text-align:center; margin: 10px 0 20px; }
-
-    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
-    .card { background: var(--muted); border:1px solid #e5e7eb; border-radius:12px; padding:12px; display:flex; flex-direction:column; align-items:center; text-align:center; }
-    .card h2 { font-size:1.1rem; margin:10px 0 4px; }
-    .price { margin: 0 0 10px; font-weight:700; }
-    .btn { border:0; background:#111; color:#fff; padding:10px 14px; border-radius:8px; cursor:pointer; font-weight:700; }
-    .btn[disabled] { background:#6b7280; cursor:not-allowed; }
-
-  
-    footer { background:#111; color:#fff; text-align:center; padding:14px 0; margin-top:auto; }
-
-  
-    @media (max-width: 640px) {
-      .menu { flex-wrap:wrap; gap:12px; }
-      h1 { font-size:1.6rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
   <header>
-    <nav class="nav" aria-label="Primary">
+    <nav class="nav" aria-label="Main">
       <div class="brand">
+        <a href="index.html" class="logo">W</a>
         <span class="site-name">WebDev PCs</span>
       </div>
       <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="index.html">Shop</a></li>
+        <li><a href="business.html">Business</a></li>
+        <li><a href="build-help.html">Build Help</a></li>
+        <li><a href="support.html">Support</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="content">
-    <h1>Pre‑Built Gaming PCs</h1>
+  <main>
+    <h1>Pre-Built Gaming PCs</h1>
 
-    <section class="grid" aria-label="Products">
+    <div class="grid">
       <article class="card">
+        <img src="images/pc1.png" alt="Gaming PC Build 1" class="image">
         <h2>PC Build 1</h2>
         <p class="price">$899.00</p>
-        <button class="btn">Add to Cart</button>
+        <button class="btn" disabled>Out of Stock</button>
       </article>
-
+      
       <article class="card">
+        <img src="images/pc2.png" alt="Gaming PC Build 2" class="image">
         <h2>PC Build 2</h2>
         <p class="price">$1,199.00</p>
-        <button class="btn" disabled aria-disabled="true">Out of Stock</button>
+        <button class="btn" disabled>Out of Stock</button>
       </article>
-
+      
       <article class="card">
+        <img src="images/pc3.png" alt="Gaming PC Build 3" class="image">
         <h2>PC Build 3</h2>
         <p class="price">$1,549.00</p>
         <button class="btn">Add to Cart</button>
       </article>
-    </section>
+      
+      <article class="card">
+        <img src="images/pc4.png" alt="Gaming PC Build 4" class="image">
+        <h2>PC Build 4</h2>
+        <p class="price">$2,099.00</p>
+        <button class="btn">Add to Cart</button>
+      </article>
+      
+      <article class="card">
+        <img src="images/pc5.png" alt="Gaming PC Build 5" class="image">
+        <h2>PC Build 5</h2>
+        <p class="price">$2,499.00</p>
+        <button class="btn">Add to Cart</button>
+      </article>
+      
+      <article class="card">
+        <img src="images/pc6.png" alt="Gaming PC Build 6" class="image">
+        <h2>PC Build 6</h2>
+        <p class="price">$3,299.00</p>
+        <button class="btn">Add to Cart</button>
+      </article>
+    </div>
   </main>
 
   <footer>
-    <small>WebDev</small>
-  </footer>
+    <small>WebDev PCs © 2025 | </small>
+    <a href="https://instagram.com" target="_blank" rel="noopener">Our Instagram</a>
+</footer>
+
 </body>
 </html>
