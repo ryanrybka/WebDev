@@ -23,23 +23,61 @@
     </nav>
   </header>
 
-  <main>
+ <main>
     <h1>Support</h1>
     <p>
       We’re here to help with your PC. Browse our troubleshooting guides or reach out for warranty and customer service support.
     </p>
-    <h2>Contact Options</h2>
-    <ul>
-      <li>Email: support@webdevpcs.com</li>
-      <li>Phone: (000) 123-4567</li>
-      <li>Live chat available during business hours</li>
-    </ul>
+
+    <h2>Contact Form</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="btn">Send</button>
+    </form>
+
+    <p id="form-status" aria-live="polite"></p>
   </main>
 
   <footer>
     <small>WebDev PCs © 2025</small> |
-    <a href="https://instagram.com" target="_blank" rel="noopener">Our Instagram</a>
+    <a href="https://instagram.com" target="_blank" rel="noopener">Our Instagram</a> |
+    <a href="https://pcpartpicker.com" target="_blank" rel="noopener">PCPartPicker</a> |
+    <a href="https://newegg.com" target="_blank" rel="noopener">Newegg</a>
   </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const status = document.getElementById("form-status");
+
+      if (name === "" || email === "" || message === "") {
+        status.textContent = "Please fill out all fields.";
+        status.style.color = "red";
+        return;
+      }
+
+      if (!email.includes("@") || !email.includes(".")) {
+        status.textContent = "Please enter a valid email address.";
+        status.style.color = "red";
+        return;
+      }
+
+      status.textContent = "Thank you, " + name + "! Your message has been sent.";
+      status.style.color = "green";
+      document.getElementById("contactForm").reset();
+    });
+  </script>
 </body>
 </html>
  
